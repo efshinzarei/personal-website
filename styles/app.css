@@ -3,10 +3,42 @@
 @import url("fonts.css");
 
 :root {
+  --primary-color: #0abead;
   --text-color: #333333;
   --shadow-color: rgba(18, 282, 255, 0.24);
   --app-bg-color: #fff;
   --section-bg-color: #fff;
+}
+
+
+/* 
+
+------------------ Reset styles --------------------
+
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
 }
 
 /* 
@@ -24,5 +56,45 @@ html {
 body {
   font-family: "Poppins-Regular";
   font-size: 1.6rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
+
+/* 
+
+
+------------------ Header --------------------
+
+
+*/
+
+.header {
+  background-color: var(--app-bg-color);
+  box-shadow: 0 0.3rem 5.9rem #04c3ff29;
+}
+.nav {
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  font-size: 7.8rem;
+  font-family: "Poppins-Black";
+  color: var(--primary-color);
+}
+.menu {
+  display: flex;
+  gap:5rem;
+  font-family: "Poppins-Medium";
+}
+.menu__item {
+} 
+.menu__link {
+}
+.menu__link--active {
+  color: var(--primary-color);
+}
+.nav__toggle-icon {
+  display: none;
+}
+.nav__toggle-line{}
