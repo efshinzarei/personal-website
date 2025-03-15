@@ -1,0 +1,67 @@
+@media screen and (max-width: 1200px) {
+  .nav__logo {
+    font-size: 6rem;
+  }
+  .menu {
+    gap: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav__logo {
+    font-size: 4rem;
+  }
+  .menu {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__logo {
+    font-size: 5.5rem;
+  }
+  .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms ease-in;
+    background-color: var(--app-bg-color);
+  }
+  .menu--open {
+    height: 29.5rem;
+  }
+  .menu__item:first-child {
+    margin-top: 2rem;
+  }
+  .menu__item:last-child {
+    margin-bottom: 2rem;
+  }
+  .nav__toggle-icon {
+    display: flex;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    opacity: 0;
+    transition: all 200ms ease-in;
+  }
+  .cover--show {
+    opacity: 1;
+    z-index: 99;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}

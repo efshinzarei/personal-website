@@ -10,7 +10,6 @@
   --section-bg-color: #fff;
 }
 
-
 /* 
 
 ------------------ Reset styles --------------------
@@ -68,8 +67,12 @@ body {
 */
 
 .header {
-  background-color: var(--app-bg-color);
+  position: fixed;
+  right: 0;
+  left: 0;
   box-shadow: 0 0.3rem 5.9rem #04c3ff29;
+  background-color: var(--app-bg-color);
+  z-index: 100;
 }
 .nav {
   height: 15rem;
@@ -78,23 +81,61 @@ body {
   align-items: center;
 }
 .nav__logo {
-  font-size: 7.8rem;
   font-family: "Poppins-Black";
+  font-size: 7.8rem;
   color: var(--primary-color);
 }
 .menu {
   display: flex;
-  gap:5rem;
+  gap: 5rem;
   font-family: "Poppins-Medium";
 }
-.menu__item {
-} 
 .menu__link {
+  transition: color 150ms ease-in;
 }
 .menu__link--active {
   color: var(--primary-color);
 }
+.menu__link:hover {
+  color: var(--primary-color);
+}
 .nav__toggle-icon {
   display: none;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.nav__toggle-line{}
+.nav__toggle-line {
+  position: relative;
+  display: inline-block;
+  transition: all 100ms ease-in;
+}
+.nav__toggle-line,
+.nav__toggle-line::before,
+.nav__toggle-line::after {
+  content: "";
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+}
+.nav__toggle-line::before {
+  position: absolute;
+  top: -1.2rem;
+  transition: all 150ms ease-in;
+}
+.nav__toggle-line::after {
+  position: absolute;
+  top: 1.2rem;
+  transition: all 150ms ease-in;
+}
+.nav__toggle-icon--open .nav__toggle-line {
+  background-color: transparent;
+}
+.nav__toggle-icon--open .nav__toggle-line::before {
+  transform: translateY(1.2rem) rotate(45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line::after {
+  transform: translateY(-1.2rem) rotate(-45deg);
+}
