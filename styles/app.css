@@ -197,7 +197,3 @@ body {
   overflow: hidden;
   box-shadow: 0 0.3rem 5.9rem #04c3ff29;
 }
-.home__svg-wrapper {
-  position: absolute;
-  right: -17rem;
-}
