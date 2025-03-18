@@ -23,7 +23,7 @@
 .row > * {
   padding-right: 15px;
   padding-left: 15px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .col {
@@ -90,6 +90,14 @@
   width: 100%;
   flex: 0 0 auto;
 }
+
+.order-0 {
+  order: 0;
+}
+.order-1 {
+  order: 1;
+}
+
 
 /* sm */
 
@@ -201,6 +209,13 @@
     width: 100%;
     flex: 0 0 auto;
   }
+
+  .order-md-0 {
+    order: 0;
+  }
+  .order-md-1 {
+    order: 1;
+  }
 }
 
 /* lg */
@@ -257,6 +272,8 @@
     width: 100%;
     flex: 0 0 auto;
   }
+
+  
 }
 
 /* xl */

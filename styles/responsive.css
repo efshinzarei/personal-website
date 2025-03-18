@@ -1,9 +1,39 @@
+@media screen and (max-width: 1400px) {
+  .home__photo {
+    background-position: -218px -10px;
+    background-size: 162%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .nav__logo {
     font-size: 6rem;
   }
   .menu {
     gap: 3.5rem;
+  }
+  .home {
+    height: 90rem;
+    padding-top: 20rem;
+  }
+  .home__say-hello {
+    font-size: 2.4rem;
+  }
+  .home__title {
+    font-size: 4rem;
+  }
+  .home__caption {
+    font-size: 1.4rem;
+  }
+  .home__link {
+    width: 16.6rem;
+    height: 5rem;
+  }
+  .home__photo {
+    width: 37rem;
+    height: 37rem;
+    background-size: 160%;
+    background-position: -142px -6px;
+    border-width: 1.7rem;
   }
 }
 
@@ -13,6 +43,24 @@
   }
   .menu {
     gap: 2rem;
+  }
+  .home {
+    height: 80rem;
+  }
+  .home__say-hello {
+    font-size: 2rem;
+  }
+  .home__title {
+    font-size: 3.5rem;
+  }
+  .home__links-wrapper {
+    gap: 1.6rem;
+  }
+  .home__photo {
+    width: 32rem;
+    height: 32rem;
+    background-size: 170%;
+    background-position: -136px -6px;
   }
 }
 
@@ -61,7 +109,49 @@
     opacity: 1;
     z-index: 99;
   }
+  .home {
+    height: 105rem;
+    padding-top: 20rem;
+    text-align: center;
+  }
+  .home__photo {
+    margin: 0 auto;
+    border-width: 1.3rem;
+  }
+  .home__content {
+    padding-top: 3rem;
+  }
+  .home__links-wrapper {
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 350px) {
+  .home__content{
+    padding-top: 2.5rem;
+  }
+  .home__say-hello {
+    font-size: 1.8rem;
+  }
+  .home__title {
+    font-size: 2.7rem;
+  }
+  .home__caption {
+    font-size: 1.2rem;
+  }
+  .home__links-wrapper {
+    flex-wrap: wrap;
+  }
+  .home__link {
+    flex-basis: 100%;
+  }
+  .home__photo {
+    width: 25rem;
+    height: 25rem;
+    background-size: 193%;
+  }
 }
