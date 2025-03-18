@@ -157,7 +157,7 @@ body {
 .home {
   height: 112rem;
   padding: 27.5rem 0;
-  background-image: url("../assets/shapes/shape4.svg");
+  background-image: url("../assets/shapes/home-shape.svg");
   background-repeat: no-repeat;
   background-position: bottom;
 }
