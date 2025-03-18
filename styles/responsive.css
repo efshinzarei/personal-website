@@ -1,7 +1,13 @@
 @media screen and (max-width: 1400px) {
   .home__photo {
-    background-position: -218px -10px;
+    background-position: -21.8rem -1rem;
     background-size: 162%;
+  }
+  .about__content {
+    flex-basis: 50%;
+  }
+  .about__cover {
+    flex-basis: 50%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -32,8 +38,17 @@
     width: 37rem;
     height: 37rem;
     background-size: 160%;
-    background-position: -142px -6px;
+    background-position: -14.2rem -0.6rem;
     border-width: 1.7rem;
+  }
+  .about__img {
+    object-position: -15rem;
+  }
+  .about__content {
+    padding-left: 3.3rem;
+  }
+  .about__description {
+    margin-bottom: 5rem;
   }
 }
 
@@ -60,7 +75,20 @@
     width: 32rem;
     height: 32rem;
     background-size: 170%;
-    background-position: -136px -6px;
+    background-position: -13.6rem -0.6rem;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about__content,
+  .about__cover {
+    flex-basis: auto;
+  }
+  .about__img {
+    object-position: 0;
+  }
+  .about__links-wrapper {
+    gap: 1.6rem;
   }
 }
 
@@ -128,10 +156,30 @@
 }
 
 @media screen and (max-width: 576px) {
+  .about__cover {
+    overflow: hidden;
+  }
+  .about__img {
+    height: 41rem;
+    transform: scale3d(1.2, 1.2, 1) translate3d(-2.5rem, 2.6rem, 0);
+    object-position: -4rem;
+  }
+  .about__content {
+    padding: 4rem 3rem;
+  }
+  .about__description {
+    margin-bottom: 3rem;
+  }
+  .about__links-wrapper {
+    flex-wrap: wrap;
+  }
+  .about__link {
+    flex-basis: 100%;
+  }
 }
 
 @media screen and (max-width: 350px) {
-  .home__content{
+  .home__content {
     padding-top: 2.5rem;
   }
   .home__say-hello {
@@ -153,5 +201,28 @@
     width: 25rem;
     height: 25rem;
     background-size: 193%;
+  }
+  .about__title {
+    font-size: 2.1rem;
+  }
+  .about__description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: inherit;
+  }
+  .about-list {
+    padding-left: 0;
+  }
+  .about-list__item {
+    font-size: 1.2rem;
+    padding-left: 2.3rem;
+  }
+  .about__img {
+    transform: none;
+    object-position: -11rem;
+  }
+  .about__link {
+    flex-basis: 100%;
+    height: 5rem;
   }
 }
