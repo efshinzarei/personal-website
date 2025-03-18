@@ -73,7 +73,7 @@ ol {
   background-color: var(--primary-color);
   position: relative;
 }
-.section-head__line::after{
+.section-head__line::after {
   content: "";
   position: absolute;
   width: 4rem;
@@ -82,9 +82,9 @@ ol {
   background-color: var(--primary-color);
   /* inset: 0;
    */
-   top: -0.5rem;
-   left: 0;
-   right: 0;
+  top: -0.5rem;
+  left: 0;
+  right: 0;
   margin: 0 auto;
 }
 
@@ -233,4 +233,65 @@ body {
   border: 2.3rem solid #fff;
   overflow: hidden;
   box-shadow: 0 0.3rem 5.9rem #04c3ff29;
+}
+
+/* ------------------ About Us Section -------------------- */
+.about {
+  display: flex;
+  box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
+}
+.about__cover {
+  flex-basis: 48%;
+}
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -100px;
+}
+.about__content {
+  flex-basis: 52%;
+  padding: 5.3rem 4.2rem 6rem 3.8rem;
+}
+.about__title {
+  font-size: 2.4rem;
+  font-family: "Poppins-SemiBold";
+  line-height: 1;
+}
+.about__description {
+  line-height: 2.4rem;
+  margin: 1.7rem 0 7.2rem;
+}
+.about__list-title {
+  font-size: 1.8rem;
+  font-family: "Poppins-SemiBold";
+  color: var(--primary-color);
+  margin-bottom: 0.2rem;
+}
+.about-list {
+  padding-left: 1rem;
+}
+.about-list__item {
+  padding-left: 3.2rem;
+  margin-top: 1.2rem;
+  position: relative;
+}
+.about-list__item::after{
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--secondry-color);
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.about__links-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  gap: 3rem;
+  
+}
+.about__link {
 }
