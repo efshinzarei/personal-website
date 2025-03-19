@@ -1,4 +1,7 @@
 @media screen and (max-width: 1400px) {
+  .home {
+    background-size: auto;
+  }
   .home__photo {
     background-position: -21.8rem -1rem;
     background-size: 162%;

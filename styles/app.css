@@ -197,6 +197,7 @@ body {
   background-image: url("../assets/shapes/home-shape.svg");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: 110vw;
 }
 .home__say-hello {
   font-size: 2.8rem;
