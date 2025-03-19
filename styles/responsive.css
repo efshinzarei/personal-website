@@ -9,6 +9,9 @@
   .about__cover {
     flex-basis: 50%;
   }
+  .service {
+    padding: 5rem 3rem 4rem;
+  }
 }
 @media screen and (max-width: 1200px) {
   .nav__logo {
@@ -50,6 +53,9 @@
   .about__description {
     margin-bottom: 5rem;
   }
+  .service {
+    padding: 6rem 5.4rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -89,6 +95,13 @@
   }
   .about__links-wrapper {
     gap: 1.6rem;
+  }
+  .services .col-md-6 {
+    padding: 0 1rem;
+  }
+  .service {
+    padding: 5rem 3.4rem 4rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -153,6 +166,12 @@
     justify-content: center;
     margin-top: 2.5rem;
   }
+  .service {
+    padding: 6rem 7.4rem;
+  }
+  .service__wave {
+    bottom: -8rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -175,6 +194,23 @@
   }
   .about__link {
     flex-basis: 100%;
+  }
+  .service {
+    padding: 5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .service__caption {
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+  .service__wave {
+    bottom: -7rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .service__wave {
+    bottom: -2rem;
   }
 }
 
@@ -203,7 +239,7 @@
     background-size: 193%;
   }
   .about__title {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
   .about__description {
     font-size: 1.2rem;
@@ -212,6 +248,9 @@
   }
   .about-list {
     padding-left: 0;
+  }
+  .about__list-title {
+    font-size: 1.7rem;
   }
   .about-list__item {
     font-size: 1.2rem;
@@ -224,5 +263,21 @@
   .about__link {
     flex-basis: 100%;
     height: 5rem;
+  }
+  .section-head__caption {
+    letter-spacing: 0.3rem;
+  }
+  .service {
+    padding: 3rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .service__title {
+    font-size: 2rem;
+  }
+  .service__caption {
+    font-size: 1.2rem;
+  }
+  .service__wave {
+    bottom: -3rem;
   }
 }

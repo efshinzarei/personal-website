@@ -278,7 +278,7 @@ body {
   margin-top: 1.2rem;
   position: relative;
 }
-.about-list__item::after{
+.about-list__item::after {
   content: "";
   position: absolute;
   width: 1.5rem;
@@ -293,6 +293,52 @@ body {
   margin-top: 4rem;
   display: flex;
   gap: 3rem;
-  
+}
+
+/* ------------------ Services Section -------------------- */
+.service {
+  color: var(--section-bg-color);
+  text-align: center;
+  padding: 8rem 3.4rem 6.2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+.service--purple{
+  background-color: #8540ff;
+}
+.service--yellow {
+  background-color: #ffc50c;
+}
+.service--pink {
+  background-color: #ec407a;
+}
+.service--orange {
+  background-color: #ff6331;
+}
+.service--blue {
+  background-color: #13b6ff;
+}
+.service--green {
+  background-color: #49af46;
+}
+.service__title {
+  margin: 2.5rem 0 1.4rem;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-family: "Poppins-Bold";
+}
+.service__caption {
+  font-family: 1.6rem;
+  line-height: 1.5;
+}
+.service__wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 }
 
