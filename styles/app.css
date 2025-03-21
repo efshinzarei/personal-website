@@ -95,12 +95,19 @@ ol {
 .justify-content-space-between {
   justify-content: space-between;
 }
+.skew-reset {
+  transform: skewY(6deg);
+}
+.h-full {
+  height: 100%;
+}
 
 /* ------------------ App -------------------- */
 html {
   font-size: 62.5%;
 }
 body {
+  height: 1000rem;
   font-family: "Poppins-Regular";
   font-size: 1.6rem;
   line-height: 1.2;
@@ -185,7 +192,7 @@ body {
 
 /* =============== Main =============== */
 .main {
-  height: 4000px;
+  /* height: 4000px; */
   position: relative;
   overflow-x: hidden;
 }
@@ -306,7 +313,7 @@ body {
   overflow: hidden;
   z-index: 5;
 }
-.service--purple{
+.service--purple {
   background-color: #8540ff;
 }
 .service--yellow {
@@ -343,3 +350,137 @@ body {
   z-index: -1;
 }
 
+/* ------------------ Resume Section -------------------- */
+.resume {
+  min-height: 82rem;
+  padding: 5rem 0;
+  margin: 15rem 0;
+  transform: skewY(-6deg);
+  box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
+  background-color: var(--section-bg-color);
+}
+.resume .section-head {
+  margin-top: 3rem;
+}
+
+/* ========= Resume List ========= */
+.resume-list {
+  position: relative;
+  min-height: 39rem;
+  margin-right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.4rem;
+  box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
+  background-color: var(--app-bg-color);
+  z-index: 4;
+}
+.resume-list::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0abead;
+  z-index: -1;
+}
+.resume-list__item {
+  position: relative;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  z-index: 3;
+  cursor: pointer;
+}
+.resume-list__item::before {
+  content: "";
+  position: absolute;
+  width: 5.2rem;
+  max-width: 28rem;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
+  background-color: #0abead;
+  transition: width 200ms ease-in;
+  z-index: -1;
+}
+.resume-list__item--active .resume-list__title {
+  color: #ffffff;
+}
+.resume-list__item--active::before {
+  width: 100%;
+}
+.resume-list__icon {
+  width: 2rem;
+  margin: 0 1rem;
+}
+.resume-list__title {
+  font-family: "Poppins-SemiBold";
+  font-size: 2rem;
+  color: var(--text-color);
+  transition: color 200ms ease-in;
+}
+
+/* ========= Resume Content ========= */
+.resume-content {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-left: 3.4rem;
+  border-left: 0.3rem solid var(--primary-color);
+  transition: opacity 200ms ease-in;
+}
+.resume-content--show {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+.resume-content__item {
+  padding-top: 2.6rem;
+}
+.resume-content__head {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.resume-content__title {
+  position: relative;
+  font-family: "Poppins-SemiBold";
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--secondry-color);
+}
+.resume-content__title::before {
+  content: "";
+  position: absolute;
+  left: -4.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.resume-content__category {
+  width: 11rem;
+  height: 3rem;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  background-color: var(--secondry-color);
+  box-shadow: 0 0.3em 0.7rem rgba(245, 127, 23, 0.24);
+}
+.resume-content__subtitle {
+  font-family: "Poppins-SemiBold";
+  font-size: 1.6rem;
+  margin: 0.8rem 0;
+}
+.resume-content__description {
+  font-size: 1.6rem;
+}
