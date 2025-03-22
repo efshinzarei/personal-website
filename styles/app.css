@@ -353,7 +353,7 @@ body {
 /* ------------------ Resume Section -------------------- */
 .resume {
   min-height: 82rem;
-  padding: 5rem 0;
+  padding: 5rem 0 10rem;
   margin: 15rem 0;
   transform: skewY(-6deg);
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
@@ -366,7 +366,7 @@ body {
 /* ========= Resume List ========= */
 .resume-list {
   position: relative;
-  min-height: 39rem;
+  height: 39rem;
   margin-right: 2.4rem;
   display: flex;
   flex-direction: column;

@@ -114,7 +114,7 @@
     padding: 3rem 0 7rem;
   }
   .resume-list {
-    min-height: auto;
+    height: auto;
     margin-bottom: 3rem;
     margin-right: 0;
     flex-direction: row;
@@ -336,6 +336,9 @@
   }
   .service__wave {
     bottom: -3rem;
+  }
+  .resume-content__head {
+    flex-direction: column;
   }
   .resume-content__subtitle {
     margin-bottom: 0.5rem;
