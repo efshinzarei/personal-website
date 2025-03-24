@@ -213,6 +213,9 @@
   .service__wave {
     bottom: -8rem;
   }
+  .portfolio-list {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -256,6 +259,9 @@
   }
   .resume-content__title::before {
     content: none;
+  }
+  .portfolio-list {
+    justify-content: flex-start;
   }
 }
 
