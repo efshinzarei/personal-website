@@ -1,6 +1,9 @@
 @import url("normalize.css");
 @import url("grid.css");
 @import url("fonts.css");
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 :root {
   --primary-color: #0abead;
@@ -354,7 +357,7 @@ body {
 .resume {
   min-height: 82rem;
   padding: 5rem 0 10rem;
-  margin: 15rem 0;
+  margin-top: 20rem;
   transform: skewY(-6deg);
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
   background-color: var(--section-bg-color);
@@ -484,3 +487,59 @@ body {
 .resume-content__description {
   font-size: 1.6rem;
 }
+
+/* ------------------ Portfolio Section -------------------- */
+.portfolio {
+  margin-top: 20rem;
+}
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4.4rem;
+}
+.portfolio-list__item {
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.5rem;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.portfolio-list__item--active {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.portfolio-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 200ms ease-in;
+}
+.portfolio-content--show {
+  height: auto;
+  opacity: 1;
+}
+.portfolio-content__img {
+  width: 100%;
+}
+
+/* ========= Reset Swiper Code ========= */
+.swiper-pagination-bullet {
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  background-color: #fff !important;
+  border: 0.4rem solid #bfbebe !important;
+}
+.swiper-pagination-bullet-active {
+  border-color: var(--primary-color) !important;
+}
+.swiper-pagination{
+  position: static !important;
+  margin-top: 1rem;
+}
+
+
