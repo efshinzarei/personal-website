@@ -2,6 +2,7 @@ const navToggleIcon = document.querySelector(".nav__toggle-icon");
 const menu = document.querySelector(".menu");
 const cover = document.querySelector(".cover");
 const resumeListItems = document.querySelectorAll(".resume-list__item");
+const portfolioListItems = document.querySelectorAll(".portfolio-list__item");
 
 navToggleIcon.addEventListener("click", () => {
   navToggleIcon.classList.toggle("nav__toggle-icon--open");
@@ -9,16 +10,34 @@ navToggleIcon.addEventListener("click", () => {
   cover.classList.toggle("cover--show");
 });
 
-resumeListItems.forEach((resumeListItem) => {
-  resumeListItem.addEventListener("click", () => {
-    document
-      .querySelector(".resume-list__item--active")
-      .classList.remove("resume-list__item--active");
-    document
-      .querySelector(".resume-content--show")
-      .classList.remove("resume-content--show");
-    resumeListItem.classList.add("resume-list__item--active");
-    let contentId = resumeListItem.getAttribute("data-content-id");
-    document.querySelector(contentId).classList.add("resume-content--show");
+function navigationTabsInit(
+  listItems,
+  listItemActiveClass,
+  contentItemShowClass
+) {
+  listItems.forEach((listItem) => {
+    listItem.addEventListener("click", () => {
+      document
+        .querySelector(`.${listItemActiveClass}`)
+        .classList.remove(listItemActiveClass);
+      document
+        .querySelector(`.${contentItemShowClass}`)
+        .classList.remove(contentItemShowClass);
+      listItem.classList.add(listItemActiveClass);
+      let contentId = listItem.getAttribute("data-content-id");
+      document.querySelector(contentId).classList.add(contentItemShowClass);
+    });
   });
-});
+}
+
+navigationTabsInit(
+  portfolioListItems,
+  "portfolio-list__item--active",
+  "portfolio-content--show"
+);
+
+navigationTabsInit(
+  resumeListItems,
+  "resume-list__item--active",
+  "resume-content--show"
+);
