@@ -144,6 +144,12 @@
   .resume-list__icon {
     display: none;
   }
+  .pricing{
+    padding-bottom: 12rem;
+  }
+  .package {
+    margin-bottom: 3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -216,6 +222,12 @@
   .portfolio-list {
     gap: 1rem;
   }
+  .package{
+    margin-bottom: 0;
+  }
+  .pricing .col-12 {
+    padding: 0 1rem 2rem !important;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -262,6 +274,10 @@
   }
   .portfolio-list {
     justify-content: flex-start;
+  }
+  .pricing .col-12{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
