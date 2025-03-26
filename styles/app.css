@@ -318,21 +318,27 @@ body {
 }
 .service--purple {
   background-color: #8540ff;
+  box-shadow: 0 0 3.5rem rgb(118, 13, 255, 0.35);
 }
 .service--yellow {
   background-color: #ffc50c;
+  box-shadow: 0 0 3.5rem rgb(255, 197, 12, 0.35);
 }
 .service--pink {
   background-color: #ec407a;
+  box-shadow: 0 0.3rem 3.5rem rgb(236, 64, 122, 0.35);
 }
 .service--orange {
   background-color: #ff6331;
+  box-shadow: 0 0 2.8rem rgb(255, 99, 49, 0.35);
 }
 .service--blue {
   background-color: #13b6ff;
+  box-shadow: 0 0 3.5rem rgb(19, 182, 255, 0.35);
 }
 .service--green {
   background-color: #49af46;
+  box-shadow: 0 0 3.5rem rgb(73, 175, 70, 0.35);
 }
 .service__title {
   margin: 2.5rem 0 1.4rem;
@@ -357,7 +363,7 @@ body {
 .resume {
   min-height: 82rem;
   padding: 5rem 0 10rem;
-  margin-top: 20rem;
+  margin-top: 15rem;
   transform: skewY(-6deg);
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
   background-color: var(--section-bg-color);
@@ -398,6 +404,7 @@ body {
   gap: 2.2rem;
   z-index: 3;
   cursor: pointer;
+  transition: color 120ms ease-in, background-color 120ms ease-in;
 }
 .resume-list__item::before {
   content: "";
@@ -437,7 +444,7 @@ body {
   opacity: 0;
   padding-left: 3.4rem;
   border-left: 0.3rem solid var(--primary-color);
-  transition: opacity 200ms ease-in;
+  transition: opacity 120ms ease-in;
 }
 .resume-content--show {
   height: auto;
@@ -490,7 +497,7 @@ body {
 
 /* ------------------ Portfolio Section -------------------- */
 .portfolio {
-  margin-top: 20rem;
+  margin-top: 12rem;
 }
 .portfolio-list {
   display: flex;
@@ -505,8 +512,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+  font-family: "Poppins-SemiBold";
   border-radius: 2.5rem;
-  transition: all 200ms ease-in;
+  transition: background-color 120ms ease-in, color 120ms ease-in;
   cursor: pointer;
 }
 .portfolio-list__item--active {
@@ -517,7 +526,7 @@ body {
   height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: opacity 200ms ease-in;
+  transition: opacity 120ms ease-in;
 }
 .portfolio-content--show {
   height: auto;
@@ -546,7 +555,7 @@ body {
 .pricing {
   min-height: 82rem;
   padding: 5rem 0 18rem;
-  margin-top: 20rem;
+  margin-top: 12rem;
   transform: skewY(-6deg);
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
   background-color: var(--section-bg-color);
@@ -612,7 +621,7 @@ body {
 
 /* ------------------ Contact Us Section -------------------- */
 .contactus {
-  margin-top: 20rem;
+  margin-top: 12rem;
 }
 .contactus__wrapper {
   height: 80rem;
@@ -701,7 +710,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 100ms ease-in;
+  transition: background-color 120ms ease-in;
 }
 .footer__social:hover {
   background-color: var(--primary-color);
