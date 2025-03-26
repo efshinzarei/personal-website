@@ -62,6 +62,9 @@
   .resume-list {
     margin-right: 1rem;
   }
+  .contactus__map {
+    left: 10%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -144,11 +147,17 @@
   .resume-list__icon {
     display: none;
   }
-  .pricing{
+  .pricing {
     padding-bottom: 12rem;
   }
   .package {
     margin-bottom: 3rem;
+  }
+  .contactus__map {
+    display: none;
+  }
+  .contact {
+    margin-right: auto;
   }
 }
 
@@ -222,7 +231,7 @@
   .portfolio-list {
     gap: 1rem;
   }
-  .package{
+  .package {
     margin-bottom: 0;
   }
   .pricing .col-12 {
@@ -275,7 +284,7 @@
   .portfolio-list {
     justify-content: flex-start;
   }
-  .pricing .col-12{
+  .pricing .col-12 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -290,6 +299,13 @@
   }
   .resume-list__title {
     font-size: 1.8rem;
+  }
+  .contact {
+    height: auto;
+    padding: 3rem 2rem 4rem;
+  }
+  .contact__input {
+    padding: 1.6rem 1.5rem;
   }
 }
 
@@ -367,5 +383,8 @@
   }
   .resume-content__item {
     padding-top: 2rem;
+  }
+  .contact__title {
+    font-size: 2.9rem;
   }
 }
