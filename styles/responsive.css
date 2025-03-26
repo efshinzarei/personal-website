@@ -237,6 +237,10 @@
   .pricing .col-12 {
     padding: 0 1rem 2rem !important;
   }
+  .footer__wrapper {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -287,6 +291,9 @@
   .pricing .col-12 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+  .footer__copy-right {
+    font-size: 1.6rem;
   }
 }
 
@@ -386,5 +393,11 @@
   }
   .contact__title {
     font-size: 2.9rem;
+  }
+  .footer__copy-right {
+    letter-spacing: 0.1rem;
+  }
+  .footer__socials {
+    flex-wrap: wrap;
   }
 }
