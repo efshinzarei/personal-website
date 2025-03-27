@@ -6,12 +6,25 @@ const portfolioListItems = document.querySelectorAll(".portfolio-list__item");
 const menuItems = document.querySelectorAll(".menu__item");
 const sections = document.querySelectorAll("main > section");
 
-navToggleIcon.addEventListener("click", () => {
-  navToggleIcon.classList.toggle("nav__toggle-icon--open");
-  menu.classList.toggle("menu--open");
-  cover.classList.toggle("cover--show");
+// Intersection Observer
+const observer = new IntersectionObserver(observerHandler, {
+  threshold: 0.50,
 });
+function observerHandler(allSections) {
+  allSections.map((section) => {
+    let sectionClassName = section.target.className;
+    let sectionMenuItem = document.querySelector(
+      `.menu__item[data-section=${sectionClassName}]`
+    );
+    if (section.isIntersecting) {
+      sectionMenuItem.classList.add("menu__item--active");
+    } else {
+      sectionMenuItem.classList.remove("menu__item--active");
+    }
+  });
+}
 
+// Custom Function
 function navigationTabsInit(
   listItems,
   listItemActiveClass,
@@ -27,45 +40,34 @@ function navigationTabsInit(
     });
   });
 }
-
 function removeActiveClass(className) {
   document.querySelector(`.${className}`).classList.remove(className);
 }
 
+// App Navigation Tabs Setting uo
 navigationTabsInit(
   portfolioListItems,
   "portfolio-list__item--active",
   "portfolio-content--show"
 );
-
 navigationTabsInit(
   resumeListItems,
   "resume-list__item--active",
   "resume-content--show"
 );
 
-const observer = new IntersectionObserver(observerHandler, {
-  threshold: 0.50,
+// Event Listeners
+navToggleIcon.addEventListener("click", () => {
+  navToggleIcon.classList.toggle("nav__toggle-icon--open");
+  menu.classList.toggle("menu--open");
+  cover.classList.toggle("cover--show");
 });
 
-function observerHandler(allSections) {
-  allSections.map((section) => {
-    let sectionClassName = section.target.className;
-    let sectionMenuItem = document.querySelector(
-      `.menu__item[data-section=${sectionClassName}]`
-    );
-    if (section.isIntersecting) {
-      sectionMenuItem.classList.add("menu__item--active");
-    } else {
-      sectionMenuItem.classList.remove("menu__item--active");
-    }
-  });
-}
 
+// Loops
 sections.forEach((section) => {
   observer.observe(section);
 });
-
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
