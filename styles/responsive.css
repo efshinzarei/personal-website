@@ -68,6 +68,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  * {
+    cursor: default !important;
+  }
   .nav__logo {
     font-size: 4rem;
   }
@@ -172,7 +175,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 100%;
+    top: 99%;
     left: 0;
     right: 0;
     height: 0;
@@ -229,7 +232,7 @@
   .service__wave {
     bottom: -8rem;
   }
-  .resume-list{
+  .resume-list {
     gap: 1rem;
   }
   .portfolio-list {

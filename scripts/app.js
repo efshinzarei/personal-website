@@ -100,3 +100,32 @@ menuItems.forEach((item) => {
     });
   });
 });
+
+// Swiper
+const swiperOptions = {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1400: {
+      spaceBetween: 30,
+    },
+  },
+};
+const swiper1 = new Swiper(".swiper1", swiperOptions);
+const swiper2 = new Swiper(".swiper2", swiperOptions);
+const swiper3 = new Swiper(".swiper3", swiperOptions);
+const swiper4 = new Swiper(".swiper4", swiperOptions);
+const swiper5 = new Swiper(".swiper5", swiperOptions);
+const swiper6 = new Swiper(".swiper6", swiperOptions);
+const swiper7 = new Swiper(".swiper7", swiperOptions);

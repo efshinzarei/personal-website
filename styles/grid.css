@@ -1,7 +1,7 @@
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   position: relative;
@@ -16,14 +16,13 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
 }
 
 .row > * {
-  padding-right: 15px;
-  padding-left: 15px;
-  /* margin-bottom: 20px; */
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .col {
@@ -97,7 +96,6 @@
 .order-1 {
   order: 1;
 }
-
 
 /* sm */
 
@@ -272,8 +270,6 @@
     width: 100%;
     flex: 0 0 auto;
   }
-
-  
 }
 
 /* xl */

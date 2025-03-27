@@ -1,9 +1,9 @@
 @import url("normalize.css");
 @import url("grid.css");
 @import url("fonts.css");
-@import "swiper/css";
+/* @import "swiper/css";
 @import "swiper/css/navigation";
-@import "swiper/css/pagination";
+@import "swiper/css/pagination"; */
 
 :root {
   --primary-color: #0abead;
@@ -12,6 +12,8 @@
   --shadow-color: rgba(18, 282, 255, 0.24);
   --app-bg-color: #fff;
   --section-bg-color: #fff;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 :root.dark-theme {
   --text-color: #95a5c6;
@@ -71,9 +73,11 @@ ol {
   justify-content: center;
   border-radius: 3rem;
   font-family: "Poppins-SemiBold";
+  line-height: 0.4rem;
   color: #fff;
   background-color: var(--primary-color);
   box-shadow: 0 1.6rem 2.9rem hsla(174, 89%, 39%, 0.41);
+  cursor: pointer;
 }
 .app-btn-orange {
   background-color: var(--secondry-color);
@@ -166,6 +170,11 @@ body {
   font-size: 7.8rem;
   color: var(--primary-color);
 }
+.nav__logo-link {
+  display: inline-block;
+  width: fit-content;
+  height: min-content;
+}
 .menu {
   display: flex;
   gap: 5rem;
@@ -223,7 +232,6 @@ body {
 
 /* =============== Main =============== */
 .main {
-  /* height: 4000px; */
   position: relative;
   overflow-x: hidden;
 }
@@ -566,6 +574,7 @@ body {
 }
 .portfolio-content__img {
   width: 100%;
+  cursor: pointer;
 }
 
 /* ========= Reset Swiper Code ========= */
@@ -767,4 +776,5 @@ body {
 .change-theme__icon {
   fill: transparent;
   stroke: #fff;
+  cursor: pointer;
 }
