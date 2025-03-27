@@ -13,6 +13,32 @@
   --app-bg-color: #fff;
   --section-bg-color: #fff;
 }
+:root.dark-theme {
+  --text-color: #95a5c6;
+  --app-bg-color: #161d26;
+  --section-bg-color: #1f2935;
+}
+:root.dark-theme .header,
+:root.dark-theme .home__photo,
+:root.dark-theme .about,
+:root.dark-theme .resume,
+:root.dark-theme .resume-list,
+:root.dark-theme .pricing,
+:root.dark-theme .package,
+:root.dark-theme .contact,
+:root.dark-theme .contactus__map {
+  box-shadow: none;
+}
+:root.dark-theme .home {
+  background-image: url(../assets/shapes/home-shope-dark.svg);
+}
+:root.dark-theme .home__caption,
+:root.dark-theme .about__list-title {
+  color: var(--text-color);
+}
+:root.dark-theme .resume-content__title {
+  color: var(--secondry-color);
+}
 
 /* ------------------ Reset styles -------------------- */
 html {
@@ -67,6 +93,7 @@ ol {
   color: var(--text-color);
   letter-spacing: 0.4rem;
   margin: 1rem 0 2rem;
+  transition: color 100ms ease-in;
 }
 .section-head__line {
   display: inline-block;
@@ -110,12 +137,12 @@ html {
   font-size: 62.5%;
 }
 body {
-  height: 750rem;
   font-family: "Poppins-Regular";
   font-size: 1.6rem;
   line-height: 1.2;
   color: var(--text-color);
   background-color: var(--app-bg-color);
+  transition: color 100ms ease-in, background-color 100ms ease-in;
 }
 
 /* ================= Header ================= */
@@ -124,8 +151,9 @@ body {
   right: 0;
   left: 0;
   box-shadow: 0 0.3rem 5.9rem #04c3ff29;
-  background-color: var(--app-bg-color);
+  background-color: var(--section-bg-color);
   z-index: 100;
+  transition: background-color 100ms ease-in;
 }
 .nav {
   height: 15rem;
@@ -147,7 +175,7 @@ body {
   color: var(--primary-color);
 }
 .menu__link {
-  transition: color 150ms ease-in;
+  transition: color 100ms ease-in;
 }
 .menu__link:hover {
   color: var(--primary-color);
@@ -202,7 +230,7 @@ body {
 
 /* ---------------- Home Section ---------------- */
 .home {
-  height: 112rem;
+  height: 100vh;
   padding: 27.5rem 0;
   background-image: url("../assets/shapes/home-shape.svg");
   background-repeat: no-repeat;
@@ -225,8 +253,7 @@ body {
   color: var(--primary-color);
 }
 .home__caption {
-  --text-color: rgb(51, 51, 51, 0.71);
-  color: var(--text-color);
+  color: #333333b5;
 }
 .home__links-wrapper {
   margin-top: 3.8rem;
@@ -241,7 +268,7 @@ body {
   background-size: 154%;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 2.3rem solid #fff;
+  border: 2.3rem solid var(--section-bg-color);
   overflow: hidden;
   box-shadow: 0 0.3rem 5.9rem #04c3ff29;
 }
@@ -264,6 +291,8 @@ body {
 .about__content {
   flex-basis: 48%;
   padding: 5.3rem 4.2rem 6rem 3.8rem;
+  background-color: var(--section-bg-color);
+  transition: background-color 100ms ease-in;
 }
 .about__title {
   font-size: 2.4rem;
@@ -308,7 +337,7 @@ body {
 
 /* ------------------ Services Section -------------------- */
 .service {
-  color: var(--section-bg-color);
+  color: #fff;
   text-align: center;
   padding: 8rem 3.4rem 6.2rem;
   margin-bottom: 3rem;
@@ -367,6 +396,7 @@ body {
   transform: translateZ(0) skewY(-6deg);
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
   background-color: var(--section-bg-color);
+  transition: background-color 100ms ease-in;
 }
 .resume .section-head {
   margin-top: 3rem;
@@ -384,6 +414,7 @@ body {
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
   background-color: var(--app-bg-color);
   z-index: 4;
+  transition: background-color 100ms ease-in;
 }
 .resume-list::before {
   content: "";
@@ -465,7 +496,7 @@ body {
   font-family: "Poppins-SemiBold";
   font-size: 2rem;
   line-height: 1;
-  color: var(--secondry-color);
+  color: #ff5823;
 }
 .resume-content__title::before {
   content: "";
@@ -484,6 +515,7 @@ body {
   text-align: center;
   border-radius: 1.5rem;
   background-color: var(--secondry-color);
+  color: #fff;
   box-shadow: 0 0.3em 0.7rem rgba(245, 127, 23, 0.24);
 }
 .resume-content__subtitle {
@@ -542,6 +574,7 @@ body {
   height: 2.4rem !important;
   background-color: #fff !important;
   border: 0.4rem solid #bfbebe !important;
+  opacity: 1 !important;
 }
 .swiper-pagination-bullet-active {
   border-color: var(--primary-color) !important;
@@ -559,6 +592,7 @@ body {
   transform: translateZ(0) skewY(-6deg);
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
   background-color: var(--section-bg-color);
+  transition: background-color 100ms ease-in;
 }
 .package {
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 0.27);
@@ -587,6 +621,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  background-color: var(--app-bg-color);
+  transition: background-color 100ms ease-in;
 }
 .package-option {
   display: flex;
@@ -642,6 +678,7 @@ body {
   background-color: var(--app-bg-color);
   border-radius: 50%;
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 27%);
+  transition: background-color 100ms ease-in;
 }
 .contact {
   max-width: 57rem;
@@ -650,6 +687,7 @@ body {
   padding: 4rem 4.5rem 5rem;
   box-shadow: 0 0 8.1rem rgba(19, 182, 255, 24%);
   background-color: var(--section-bg-color);
+  transition: background-color 100ms ease-in;
 }
 .contact__title {
   margin-bottom: 2.4rem;
@@ -666,25 +704,30 @@ body {
   box-shadow: 0 0 5.9rem rgba(96, 233, 255, 27%);
   border-radius: 1rem;
   background-color: var(--app-bg-color);
+  transition: color 100ms ease-in;
+  transition: background-color 100ms ease-in;
 }
 .contact__input--textarea {
   height: 18rem;
   padding: 1.6rem 3.3rem;
   color: var(--text-color);
   resize: none;
+  transition: color 100ms ease-in;
 }
 .contact__input::placeholder {
   color: var(--text-color);
+  transition: color 100ms ease-in;
 }
 .contact__submit {
   font-size: 1.8rem;
   width: 100%;
 }
 
-/* =================== Contact Us Section =================== */
+/* =================== Footer Section =================== */
 .footer {
   padding: 2.8rem 0;
   background-color: var(--app-bg-color);
+  transition: background-color 100ms ease-in;
 }
 .footer__wrapper {
   display: flex;
@@ -696,13 +739,15 @@ body {
   font-family: "Poppins-SemiBold";
   color: var(--text-color);
   letter-spacing: 0.4rem;
+  transition: color 100ms ease-in;
 }
 .footer__socials {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.footer__social {
+.footer__social,
+.change-theme {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -717,4 +762,9 @@ body {
 }
 .footer__icon {
   fill: var(--app-bg-color);
+  transition: fill 100ms ease-in;
+}
+.change-theme__icon {
+  fill: transparent;
+  stroke: #fff;
 }
