@@ -1,3 +1,19 @@
+@media screen and (min-width: 3000px) {
+  :root.dark-theme .home {
+    background-image: none;
+  }
+  .home {
+    background-image: none;
+    height: 85rem;
+  }
+}
+
+@media screen and (min-width: 1990px) {
+  .home {
+    background-size: contain;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .home {
     background-size: 238rem;
