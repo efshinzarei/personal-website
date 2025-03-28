@@ -211,7 +211,7 @@
     z-index: 99;
   }
   .home {
-    /* height: 110rem; */
+    height: 108rem;
     padding-top: 19rem;
     text-align: center;
   }
@@ -251,6 +251,9 @@
 }
 
 @media screen and (max-width: 576px) {
+  :root.dark-theme .home {
+    background: none;
+  }
   .nav {
     height: 12rem;
   }

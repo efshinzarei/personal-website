@@ -1,9 +1,6 @@
 @import url("normalize.css");
 @import url("grid.css");
 @import url("fonts.css");
-/* @import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination"; */
 
 :root {
   --primary-color: #0abead;
@@ -114,8 +111,6 @@ ol {
   height: 1.1rem;
   border-radius: 2rem;
   background-color: var(--primary-color);
-  /* inset: 0;
-   */
   top: -0.5rem;
   left: 0;
   right: 0;
