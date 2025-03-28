@@ -238,12 +238,11 @@ body {
 
 /* ---------------- Home Section ---------------- */
 .home {
-  height: 100vh;
-  padding: 27.5rem 0;
+  height: 110rem;
+  padding-top: 21.5rem;
   background-image: url("../assets/shapes/home-shape.svg");
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 110vw;
+  background-position-y: 101%;
 }
 .home__say-hello {
   font-size: 2.8rem;

@@ -1,6 +1,6 @@
 @media screen and (max-width: 1400px) {
   .home {
-    background-size: auto;
+    background-size: 238rem;
   }
   .home__photo {
     background-position: -21.8rem -1rem;
@@ -24,8 +24,8 @@
     gap: 3.5rem;
   }
   .home {
-    height: 90rem;
-    padding-top: 20rem;
+    height: 98rem;
+    padding-top: 22rem;
   }
   .home__say-hello {
     font-size: 2.4rem;
@@ -78,7 +78,7 @@
     gap: 2rem;
   }
   .home {
-    height: 80rem;
+    height: 88rem;
   }
   .home__say-hello {
     font-size: 2rem;
@@ -211,7 +211,7 @@
     z-index: 99;
   }
   .home {
-    height: 105rem;
+    /* height: 110rem; */
     padding-top: 19rem;
     text-align: center;
   }
@@ -251,6 +251,14 @@
 }
 
 @media screen and (max-width: 576px) {
+  .nav {
+    height: 12rem;
+  }
+  .home {
+    height: fit-content;
+    padding-top: 17rem;
+    background: none;
+  }
   .about__cover {
     overflow: hidden;
   }
@@ -305,8 +313,29 @@
 }
 
 @media screen and (max-width: 460px) {
+  .secton-head {
+    margin: 7rem 0 4rem;
+  }
+  .home__title {
+    font-size: 3.4rem;
+  }
   .service__wave {
     bottom: -2rem;
+  }
+  .resume {
+    margin-top: 8rem;
+    margin-bottom: 0;
+  }
+  .portfolio {
+    margin-top: 0;
+  }
+  .pricing {
+    margin-top: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 8rem;
+  }
+  .contactus {
+    margin-top: 8rem;
   }
   .resume-list {
     gap: 1rem;
@@ -320,6 +349,9 @@
   }
   .contact__input {
     padding: 1.6rem 1.5rem;
+  }
+  .footer__socials {
+    flex-wrap: wrap;
   }
 }
 
